@@ -20,10 +20,10 @@ function App() {
           Learn React
         </a>
       </header>
-      <Card>
-        <p>Some interesting text</p>
-        <button>Click me</button>
-      </Card>
+      <Card renderHeader={() => <h3>A custom header</h3>}>
+      <p>Some interesting text</p>
+      <button>Click me</button>
+    </Card>
     </div>
   );
 }

@@ -1,9 +1,13 @@
 import React, {memo} from 'react';
 
-const Card = ({ children }) => (
+
+const Card = ({ children, title, renderHeader }) => (
     <div className="card">
-      {children}
+    <div className="card-header">
+      {renderHeader ? renderHeader() : title !== undefined ? title : null}
     </div>
+    <div className="card-content">{children}</div>
+  </div>
   );
 
   export default memo(Card);
