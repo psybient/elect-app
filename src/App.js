@@ -2,28 +2,31 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Card from './components/Card';
-
+import List from './components/List';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+
+        <Card renderHeader={() => <h3>Card Camponent</h3>}>
+          <p>Some interesting text</p>
+          <button>Click me</button>
+        </Card>
+
+        <List
+          data={["Fred", "Bob", "Jane"]}
+          renderHeader={() => <h3>Names</h3>}
+          renderItem={item => (
+            <div>
+              <span style={{ marginRight: "10px" }}>{item}</span>
+              <button>Click me</button>
+            </div>
+          )}
+        />
+        
       </header>
-      <Card renderHeader={() => <h3>A custom header</h3>}>
-        <p>Some interesting text</p>
-        <button>Click me</button>
-      </Card>
     </div>
   );
 }
