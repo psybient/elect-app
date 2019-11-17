@@ -2,6 +2,21 @@
   "name": "electron-react-typescript-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
+  "build": {
+    "appId": "some.id.ofyours",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "category": "your.app.category.type",
+      "iconUrl": "path-to-icon.png"
+    },
+    "mac": {
+      "category": "your.app.category.type",
+      "iconUrl": "path-to-icon.png"
+    }
+  },
   "dependencies": {
     "electron": "^7.1.1",
     "react": "^16.12.0",
