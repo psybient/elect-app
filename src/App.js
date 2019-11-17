@@ -21,9 +21,9 @@ function App() {
         </a>
       </header>
       <Card renderHeader={() => <h3>A custom header</h3>}>
-      <p>Some interesting text</p>
-      <button>Click me</button>
-    </Card>
+        <p>Some interesting text</p>
+        <button>Click me</button>
+      </Card>
     </div>
   );
 }
