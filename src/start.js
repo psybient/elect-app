@@ -29,3 +29,5 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+//https://dev.to/jsmanifest/create-your-first-react-desktop-application-in-electron-with-hot-reload-4jj5
