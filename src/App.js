@@ -16,8 +16,8 @@ function App() {
         </Card>
 
         <List
-          data={["Fred", "Bob", "Jane"]}
-          renderHeader={() => <h3>Names</h3>}
+          data={[...Array(10).keys()]} // {["Fred", "Bob", "Jane"]}
+          renderHeader={() => <h3>Names List Component</h3>}
           renderItem={item => (
             <div>
               <span style={{ marginRight: "10px" }}>{item}</span>
@@ -25,7 +25,7 @@ function App() {
             </div>
           )}
         />
-        
+
       </header>
     </div>
   );
