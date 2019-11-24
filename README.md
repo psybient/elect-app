@@ -1,5 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Then electron added to project via this manual:
+We get the benefits of hot reloading from CRA right into the electron window along with node.js modules and the local file system environment right into the "web" page.
+## To start
+    run `npm start`, then run `npm run electron`.
+
+
+## Features
+- electron-builder : we have built the files using electron-builder where we load up the app contents through some executable
+- electron-is-dev : 
 ## Available Scripts
 
 In the project directory, you can run:
