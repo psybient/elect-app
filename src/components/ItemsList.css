@@ -1,0 +1,35 @@
+#item-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1em;
+    align-items: center;
+    text-align: center;
+}
+div.item{
+  
+    background-color:gray;
+    color:#FFF;
+    /* padding:1.5rem; */
+    /* padding:2rem; */
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    padding: 0.5rem;
+  
+    transition: background-color 0.2s ease-in;
+    cursor: pointer;
+  }
+  div.item:hover{
+    background-color:white !important;
+    color: darkslategrey;
+  }
+  
+  div.item[type="grade"]{
+    background-color:darkslateblue;
+  }
+  
+  div.item[type="unit"]{
+    background-color:dodgerblue;
+  
+  }

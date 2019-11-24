@@ -1,32 +1,45 @@
 import React from 'react';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
+
 import logo from './logo.svg';
 import './App.css';
-import Card from './components/Card';
-import List from './components/List';
+
+// components
+//import ItemList from './components/ItemList';
+import ItemsList from './components/ItemsList';
+//import List from './components/List';
+// // apollo client setup
+export const client = new ApolloClient({
+  uri: 'http://localhost:4000/graphql'
+});
+
+const testFetch = () => new Promise(resolve => fetch('http://localhost:4000/graphql' + '?query={item(id:"10"){text}}')
+.then(response => response.json())
+  .then(result => {
+    console.log(result)
+    return resolve(result)
+  }));
+
+testFetch().then(result => console.log(result));
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-
-
-        <Card renderHeader={() => <h3>Card Camponent</h3>}>
-          <p>Some interesting text</p>
-          <button>Click me</button>
-        </Card>
-
-        <List
-          data={[...Array(10).keys()]} // {["Fred", "Bob", "Jane"]}
-          renderHeader={() => <h3>Names List Component</h3>}
-          renderItem={item => (
-            <div>
-              <span style={{ marginRight: "10px" }}>{item}</span>
-              <button>Click me</button>
-            </div>
-          )}
-        />
-
+        <p>
+          A <code>GraphQL</code> Playground.
+        </p>
+        <button className="App-link">
+          Load List
+        </button>
       </header>
+      <ApolloProvider client={client}>
+      
+        <ItemsList />
+
+      </ApolloProvider>
     </div>
   );
 }

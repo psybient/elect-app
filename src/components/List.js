@@ -1,13 +1,8 @@
+import React, {memo} from 'react';
 
-  import React, {memo} from 'react';
 
-//   interface Props {
-//     data: string[];
-//     renderItem?: (item: string) => JSX.Element;
-//     renderHeader?: () => JSX.Element;
-//   }
 
-  const List = ({ data, renderItem, renderHeader }) => (
+const List = ({ data, renderItem, renderHeader }) => (
     <div className="list">
       <div className="list-header">{renderHeader && renderHeader()}</div>
       <ul>
@@ -18,5 +13,5 @@
     </div>
   );
 
-
+  //export default graphql(getItemsQuery)(ItemList);
   export default memo(List);
