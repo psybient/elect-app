@@ -13,6 +13,9 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
+    frame:false,
+    //titleBarStyle: 'customButtonsOnHover'
+    transparent: true
   })
 
   mainWindow.loadURL(
