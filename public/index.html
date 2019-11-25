@@ -27,7 +27,8 @@
     button {
       -webkit-app-region: no-drag;
     }
-    .titlebar {
+    /* In a frameless window the dragging behaviour may conflict with selecting text */
+    .titlebar { 
   -webkit-user-select: none;
   -webkit-app-region: drag;
 }
